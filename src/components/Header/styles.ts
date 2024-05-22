@@ -32,6 +32,13 @@ export const Header = styled.header`
 
     span {
       color: ${cores.corFundo};
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      path {
+        color: ${cores.corFundo};
+      }
     }
   }
 

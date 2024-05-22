@@ -1,12 +1,12 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 import { Produto } from '../../App'
 
-type CarrinhoState = {
+type CarinhoState = {
   itens: Produto[]
 }
 
-const initialState: CarrinhoState = {
+const initialState: CarinhoState = {
   itens: []
 }
 
@@ -15,12 +15,13 @@ const carrinhoSlice = createSlice({
   initialState,
   reducers: {
     adicionar: (state, action: PayloadAction<Produto>) => {
-      const produto = action.payload
+      const produtoAtual = action.payload
 
-      if (state.itens.find((produto) => produto.id === produto.id)) {
-        alert('Item já adicinado')
+      if (state.itens.find((item) => item.id === produtoAtual.id)) {
+        state.itens = state.itens.filter((item) => item.id !== produtoAtual.id)
+        alert(`O item ${produtoAtual.nome} foi removido`)
       } else {
-        state.itens.push(produto)
+        state.itens = [...state.itens, produtoAtual]
       }
     }
   }

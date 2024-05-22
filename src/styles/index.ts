@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  corTexto: '#121714',
+  corTexto: '#fff',
   corFundo: '#eee',
-  corPrincipal: '#0c2461',
-  corSecundaria: '#4a69bd'
+  corPrincipal: '#740001',
+  corSecundaria: 'red'
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${cores.corFundo};
+    background-color: #000;
     padding-bottom: 80px;
   }
 
