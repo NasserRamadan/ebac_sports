@@ -15,7 +15,7 @@ export type Produto = {
 }
 
 function App() {
-  const { data: produtos = [], isLoading } = useGetProdutosQuery()
+  const { isLoading } = useGetProdutosQuery()
   const [favoritos, setFavoritos] = useState<Produto[]>([])
 
   function favoritar(produto: Produto) {

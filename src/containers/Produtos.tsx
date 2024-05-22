@@ -32,7 +32,7 @@ const ProdutosComponent = ({ favoritos, favoritar }: Props) => {
             key={produto.id}
             produto={produto}
             favoritar={favoritar}
-            aoComprar={function (produto: ProdutoType): void {
+            aoComprar={function (): void {
               throw new Error('Function not implemented.')
             }}
           />
